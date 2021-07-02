@@ -19,7 +19,7 @@ var days = map[int]string{
 
 var gifts = map[int]string{
 	1:  "a Partridge in a Pear Tree.",
-	2:  "two Turtle Doves, ",
+	2:  "two Turtle Doves, and ",
 	3:  "three French Hens, ",
 	4:  "four Calling Birds, ",
 	5:  "five Gold Rings, ",
@@ -50,10 +50,6 @@ func Verse(day int) string {
 	output := fmt.Sprintf("On the %s day of Christmas my true love gave to me: ", days[day])
 
 	for i := day; i >= 1; i-- {
-		if i == 1 && day > 1 {
-			output += "and "
-		}
-
 		output += gifts[i]
 	}
 
